@@ -45,3 +45,19 @@ installed versions). Asked a check question and offered to record the question.
 **User:** dont forget to update history.md
 
 **Agent:** Added the messages since the build to history.md.
+
+**User:** can you explain what pytest.ini does
+
+**Agent:** Explained that pytest reads pytest.ini automatically on startup.
+`pythonpath = game` adds game/ to where Python looks for imports, so the tests can
+`from pong import logic`. `testpaths = tests` tells a plain `pytest` to look for
+tests only in tests/. Suggested renaming the file temporarily to see the
+`No module named 'pong'` error, and asked a check question.
+
+**User:** so if I were to do further development and add more tests from folders
+outside game/, this file would let me add the location of another folder?
+
+**Agent:** Yes, with one distinction. `testpaths` is where tests live and
+`pythonpath` is where the code being tested lives, and both take several
+space-separated folders. Warned that game code placed outside game/ won't be
+included in the pygbag browser build. Asked a check question.
