@@ -23,3 +23,25 @@ tests (all pass). Rendered every screen headlessly to check the layout. The firs
 pygbag build packed the `.venv` folder (12 MB), so the agent moved the game into
 `game/` (bundle now about 7 KB) and added `pytest.ini`, `.gitignore`, and
 `requirements.txt`. Wrote `arch.md`.
+
+**Agent:** Summarized the build, gave Git Bash run steps, asked a check question
+(which keys move the paddle after a 90° flip), and asked permission to commit.
+
+**User:** ill take a look at everythign before I commit
+
+**Agent:** Held off on committing. Suggested a review order (arch.md → logic.py →
+tests → main.py/ui.py), a test-breaking experiment, and `git status` / `git diff`
+to inspect changes.
+
+## 2026-11-16
+
+**User:** what uses requirements.txt?
+
+**Agent:** Explained that only pip reads it (`pip install -r requirements.txt`), and
+that it's how the git-ignored `.venv` gets rebuilt after cloning. Noted the file
+lists no version numbers (`pygame-ce==2.5.8` would pin one; `pip freeze` shows the
+installed versions). Asked a check question and offered to record the question.
+
+**User:** dont forget to update history.md
+
+**Agent:** Added the messages since the build to history.md.
